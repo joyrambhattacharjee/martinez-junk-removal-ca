@@ -1,0 +1,6 @@
+# Martinez Junk Removal
+User-agent: *
+Allow: /
+
+# One canonical host: the apex, over https, with trailing slashes.
+Sitemap: https://martinezjunkremovalca.com/sitemap.xml

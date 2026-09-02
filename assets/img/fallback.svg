@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" role="img" aria-label="">
+  <!-- Shown only when a photo URL fails to load: img[data-fallback] in
+       src/styles/tailwind.css swaps this in. Deliberately crop-safe — a flat
+       field plus edge-to-edge rules, so any aspect ratio still reads correctly.
+       No text or centred mark, because object-fit: cover would clip it. -->
+  <defs>
+    <pattern id="hatch" width="34" height="34" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+      <rect width="34" height="34" fill="#26333F"/>
+      <rect width="17" height="34" fill="#2C3B48"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#hatch)"/>
+
+  <!-- Load-line gauge across the lower third: ticks at eighths, filled to 5/8 -->
+  <rect x="0" y="596" width="1200" height="96" fill="#1B242D"/>
+  <rect x="0" y="596" width="750" height="96" fill="#FFAD1F" opacity=".9"/>
+  <g fill="#10161C" opacity=".55">
+    <rect x="150" y="596" width="3" height="96"/>
+    <rect x="300" y="596" width="3" height="96"/>
+    <rect x="450" y="596" width="3" height="96"/>
+    <rect x="600" y="596" width="3" height="96"/>
+    <rect x="750" y="596" width="3" height="96"/>
+    <rect x="900" y="596" width="3" height="96"/>
+    <rect x="1050" y="596" width="3" height="96"/>
+  </g>
+  <rect x="0" y="588" width="1200" height="8" fill="#FFAD1F"/>
+</svg>

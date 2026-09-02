@@ -1,0 +1,416 @@
+@import "tailwindcss";
+
+/* The templates are the source of truth for every class name in the site, so
+   scanning build/ lets the CSS compile before a single .html file exists. The
+   generated HTML is scanned too, listed by directory rather than as `**` so
+   node_modules is never walked. */
+@source "../../build/**/*.{mjs,js}";
+@source "../../assets/js/**/*.js";
+@source "../../*.html";
+@source "../../{services,areas-we-serve,blog,about,contact,reviews,faq}/**/*.html";
+@source "../../{commercial-junk-removal,residential-junk-removal}/**/*.html";
+@source "../../{privacy-policy,terms-of-service,disclaimer,accessibility}/**/*.html";
+
+@theme {
+  /* Palette — industrial steel + hi-vis, drawn from dump beds and safety gear */
+  --color-ink: #10161c;
+  --color-steel: #26333f;
+  --color-steel-2: #354553;
+  /* Muted body text. Nudged darker than the obvious #5B6B79 so it clears AA on
+     the darkest light surface it ever sits on — concrete-2, where the original
+     landed at 4.41:1. Now 4.81:1 there, 5.99:1 on white. */
+  --color-slate: #566573;
+  --color-concrete: #edf0f2;
+  --color-concrete-2: #e2e7ea;
+  --color-hivis: #ffad1f;
+  /* Amber is a *surface* colour: legible under ink, illegible as text on white
+     (#FFAD1F on white is 1.87:1). So the family splits by role —
+     `hivis` fills, `hivis-press` is the pressed/hover fill, and `hivis-deep` is
+     the only one used for text and meaningful marks on light backgrounds, dark
+     enough to clear AA on white (6.2:1), concrete (5.4:1) and concrete-2 (4.9:1). */
+  --color-hivis-press: #d98a00;
+  --color-hivis-deep: #8a5600;
+  --color-moss: #3f5d34;
+  --color-moss-2: #577a48;
+
+  --font-display: "Archivo", "Arial Narrow", system-ui, sans-serif;
+  --font-sans: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  --text-hero: clamp(2.15rem, 1.15rem + 4.2vw, 4.5rem);
+  --text-h2: clamp(1.6rem, 1.1rem + 1.9vw, 2.6rem);
+  --text-h3: clamp(1.15rem, 1rem + 0.6vw, 1.4rem);
+
+  --radius-tool: 3px;
+  --shadow-lift: 0 1px 0 0 rgb(16 22 28 / 0.06), 0 14px 34px -22px rgb(16 22 28 / 0.4);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--color-concrete);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    text-underline-offset: 3px;
+  }
+  h1, h2, h3, h4, .display {
+    font-family: var(--font-display);
+    font-stretch: 112%;
+    font-weight: 800;
+    letter-spacing: -0.018em;
+    line-height: 1.03;
+    text-wrap: balance;
+  }
+  h1 { font-size: var(--text-hero); }
+  h2 { font-size: var(--text-h2); }
+  h3 { font-size: var(--text-h3); letter-spacing: -0.008em; line-height: 1.15; }
+  p { text-wrap: pretty; }
+  :focus-visible {
+    outline: 3px solid var(--color-hivis);
+    outline-offset: 2px;
+    border-radius: 1px;
+  }
+  .on-dark :focus-visible { outline-color: var(--color-hivis); }
+  ::selection { background: var(--color-hivis); color: var(--color-ink); }
+  iframe { border: 0; display: block; }
+  summary::-webkit-details-marker { display: none; }
+}
+
+@layer components {
+  .wrap { width: 100%; max-width: 78rem; margin-inline: auto; padding-inline: 1.15rem; }
+  @media (min-width: 768px) { .wrap { padding-inline: 2rem; } }
+
+  /* Mono utility label — the "weight ticket" voice used for eyebrows and data */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-slate);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 1.6rem;
+    height: 2px;
+    background: var(--color-hivis);
+    flex: none;
+  }
+  .on-dark .eyebrow { color: color-mix(in srgb, var(--color-concrete) 72%, transparent); }
+  .eyebrow-plain::before { display: none; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 1.05rem 1.5rem;
+    border-radius: var(--radius-tool);
+    border: 1px solid transparent;
+    transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+    text-align: center;
+    line-height: 1;
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn-primary { background: var(--color-hivis); color: var(--color-ink); }
+  .btn-primary:hover { background: var(--color-hivis-press); }
+  .btn-dark { background: var(--color-ink); color: #fff; }
+  .btn-dark:hover { background: var(--color-steel); }
+  .btn-outline { border-color: color-mix(in srgb, var(--color-ink) 22%, transparent); color: var(--color-ink); }
+  .btn-outline:hover { border-color: var(--color-ink); background: color-mix(in srgb, var(--color-ink) 5%, transparent); }
+  .on-dark .btn-outline { border-color: color-mix(in srgb, #fff 32%, transparent); color: #fff; }
+  .on-dark .btn-outline:hover { border-color: #fff; background: color-mix(in srgb, #fff 10%, transparent); }
+  .btn-sm { padding: 0.75rem 1.1rem; font-size: 0.75rem; }
+
+  /* ── Signature: the load line ─────────────────────────────────────────
+     A measured truck-bed gauge. Ticks mark eighths of a 15-yd bed, which is
+     how the job is actually priced, so the graphic carries the information. */
+  .gauge {
+    position: relative;
+    height: 2.9rem;
+    background: var(--color-steel);
+    border: 1px solid color-mix(in srgb, #fff 14%, var(--color-steel));
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .gauge-fill {
+    position: absolute;
+    inset-block: 0;
+    left: 0;
+    width: var(--fill, 50%);
+    background: var(--color-hivis);
+    box-shadow: inset -2px 0 0 0 color-mix(in srgb, var(--color-ink) 30%, transparent);
+  }
+  .gauge-fill-moss { background: var(--color-moss-2); }
+  .gauge::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: repeating-linear-gradient(
+      to right,
+      color-mix(in srgb, var(--color-ink) 55%, transparent) 0 1px,
+      transparent 1px 12.5%
+    );
+  }
+  .gauge-lg { height: 4.25rem; }
+  .gauge-sm { height: 1.35rem; }
+
+  /* Ruler-edge divider */
+  .tickrule {
+    height: 0.55rem;
+    background-image: repeating-linear-gradient(to right, currentColor 0 1px, transparent 1px 0.75rem);
+    opacity: 0.28;
+  }
+
+  .card {
+    background: #fff;
+    border: 1px solid color-mix(in srgb, var(--color-ink) 10%, transparent);
+    border-radius: var(--radius-tool);
+  }
+  .card-link { transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease; }
+  .card-link:hover {
+    border-color: color-mix(in srgb, var(--color-ink) 26%, transparent);
+    box-shadow: var(--shadow-lift);
+  }
+  .card-link:hover .card-arrow { transform: translateX(4px); }
+  .card-arrow { transition: transform 0.18s ease; }
+
+  /* Accordion — native details, so it works with JS disabled */
+  .qa {
+    border-top: 1px solid color-mix(in srgb, var(--color-ink) 12%, transparent);
+  }
+  .qa summary {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.25rem;
+    cursor: pointer;
+    padding: 1.15rem 0;
+    font-family: var(--font-display);
+    font-stretch: 108%;
+    font-weight: 700;
+    font-size: 1.0625rem;
+    line-height: 1.3;
+    list-style: none;
+  }
+  .qa summary:hover { color: var(--color-hivis-deep); }
+  .qa .qa-sign {
+    flex: none;
+    width: 1.4rem;
+    height: 1.4rem;
+    position: relative;
+    margin-top: 0.15rem;
+    border: 1px solid color-mix(in srgb, var(--color-ink) 25%, transparent);
+  }
+  .qa .qa-sign::before,
+  .qa .qa-sign::after {
+    content: "";
+    position: absolute;
+    background: currentColor;
+    inset-inline: 0.3rem;
+    top: 50%;
+    height: 1px;
+  }
+  .qa .qa-sign::after { transform: rotate(90deg); transition: transform 0.2s ease; }
+  .qa[open] .qa-sign::after { transform: rotate(0deg); }
+  .qa-body { padding-bottom: 1.25rem; color: var(--color-slate); max-width: 62ch; }
+
+  /* Checklist with a hi-vis tick */
+  .ticklist { display: grid; gap: 0.7rem; }
+  .ticklist > li { position: relative; padding-left: 1.85rem; }
+  .ticklist > li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 0.7rem;
+    height: 0.42rem;
+    border-left: 2px solid var(--color-hivis-deep);
+    border-bottom: 2px solid var(--color-hivis-deep);
+    transform: rotate(-45deg);
+  }
+  .on-dark .ticklist > li::before { border-color: var(--color-hivis); }
+
+  /* Blog + legal typography */
+  .prose { max-width: 44rem; }
+  .prose > * + * { margin-top: 1.15rem; }
+  .prose h2 {
+    font-size: clamp(1.4rem, 1.1rem + 1vw, 1.9rem);
+    margin-top: 2.6rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid color-mix(in srgb, var(--color-ink) 12%, transparent);
+  }
+  .prose h3 { font-size: 1.2rem; margin-top: 1.9rem; }
+  .prose p, .prose li { color: color-mix(in srgb, var(--color-ink) 82%, var(--color-slate)); }
+  .prose a { color: var(--color-ink); text-decoration: underline; text-decoration-color: var(--color-hivis); text-decoration-thickness: 2px; }
+  .prose a:hover { color: var(--color-hivis-deep); }
+  .prose ul, .prose ol { padding-left: 1.35rem; display: grid; gap: 0.5rem; }
+  .prose ul { list-style: square; }
+  .prose ol { list-style: decimal; }
+  .prose ul::marker, .prose li::marker { color: var(--color-hivis-deep); }
+  .prose blockquote {
+    border-left: 3px solid var(--color-hivis);
+    padding: 0.2rem 0 0.2rem 1.15rem;
+    font-size: 1.15rem;
+    line-height: 1.5;
+  }
+  .prose table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .prose th, .prose td { text-align: left; padding: 0.7rem 0.8rem; border: 1px solid color-mix(in srgb, var(--color-ink) 12%, transparent); }
+  .prose th { background: var(--color-concrete-2); font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; }
+
+  /* Same voice as .prose at a smaller scale: used for short intros and for
+     copy sitting inside a panel, where a ruled H2 would be too loud. */
+  .prose-tight > * + * { margin-top: 0.9rem; }
+  .prose-tight h2 { font-size: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem); margin-top: 1.9rem; }
+  .prose-tight h3 { font-size: 1.1rem; margin-top: 1.5rem; }
+  .prose-tight > :first-child { margin-top: 0; }
+  .prose-tight p, .prose-tight li { color: color-mix(in srgb, var(--color-ink) 82%, var(--color-slate)); }
+  .prose-tight ul, .prose-tight ol { padding-left: 1.25rem; display: grid; gap: 0.45rem; }
+  .prose-tight ul { list-style: square; }
+  .prose-tight ol { list-style: decimal; }
+  .prose-tight li::marker { color: var(--color-hivis-deep); }
+  .prose-tight a { color: var(--color-ink); text-decoration: underline; text-decoration-color: var(--color-hivis); text-decoration-thickness: 2px; }
+  .prose-tight a:hover { color: var(--color-hivis-deep); }
+
+  /* Neighborhood and brand pills — reads as a stamped tag, not a bubble */
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.34rem 0.65rem;
+    border: 1px solid color-mix(in srgb, var(--color-ink) 14%, transparent);
+    background: #fff;
+    border-radius: 2px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.02em;
+    color: color-mix(in srgb, var(--color-ink) 78%, var(--color-slate));
+    white-space: nowrap;
+  }
+  .chip::before {
+    content: "";
+    width: 0.3rem;
+    height: 0.3rem;
+    background: var(--color-hivis-press); /* decorative dot — keep the amber pop */
+    flex: none;
+  }
+  .on-dark .chip {
+    background: color-mix(in srgb, #fff 7%, transparent);
+    border-color: color-mix(in srgb, #fff 16%, transparent);
+    color: color-mix(in srgb, #fff 78%, transparent);
+  }
+
+  /* On-this-page rail for long posts */
+  .toc {
+    border-left: 2px solid var(--color-hivis);
+    background: #fff;
+    border-block: 1px solid color-mix(in srgb, var(--color-ink) 10%, transparent);
+    border-right: 1px solid color-mix(in srgb, var(--color-ink) 10%, transparent);
+    padding: 1.15rem 1.25rem;
+  }
+  .toc a { text-decoration: none; }
+  .toc a:hover { text-decoration: underline; text-decoration-color: var(--color-hivis); }
+
+  /* Mobile nav panel */
+  .navpanel {
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    background: var(--color-ink);
+    color: #fff;
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-0.6rem);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  }
+  .navpanel[data-open="true"] { opacity: 1; visibility: visible; transform: none; }
+  .navlink-active { color: var(--color-hivis); }
+
+  /* Persistent call bar (small screens) */
+  .callbar {
+    position: fixed;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: 80;
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    border-top: 1px solid color-mix(in srgb, #fff 18%, transparent);
+    transform: translateY(105%);
+    transition: transform 0.25s ease;
+  }
+  .callbar[data-show="true"] { transform: none; }
+  @media (min-width: 1024px) { .callbar { display: none; } }
+
+  /* Scroll reveal. Gated on [data-js] — set synchronously in <head> — so that
+     with JavaScript off the content is simply visible rather than stuck at
+     opacity 0 forever. */
+  [data-js] .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.5s ease, transform 0.5s ease; }
+  .reveal[data-seen="true"] { opacity: 1; transform: none; }
+
+  .stripes {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      var(--color-hivis) 0 0.75rem,
+      var(--color-ink) 0.75rem 1.5rem
+    );
+  }
+  .hairline { border-color: color-mix(in srgb, var(--color-ink) 12%, transparent); }
+  .on-dark .hairline { border-color: color-mix(in srgb, #fff 16%, transparent); }
+
+  /* Aside note inside long copy — the shield mark ties it to the trust strip */
+  .callout {
+    display: flex;
+    gap: 0.9rem;
+    padding: 1.15rem 1.25rem;
+    background: var(--color-concrete-2);
+    border-left: 3px solid var(--color-hivis);
+    border-radius: 2px;
+  }
+  .callout p { margin: 0; font-size: 0.965rem; line-height: 1.6; }
+  .callout-mark { flex: none; margin-top: 0.15rem; color: var(--color-hivis-deep); }
+
+  /* Wide comparison tables scroll rather than squash the page at 360px */
+  .table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid color-mix(in srgb, var(--color-ink) 12%, transparent);
+    background: #fff;
+  }
+  .table-scroll table { min-width: 34rem; border: 0; }
+  .table-scroll :is(th, td):first-child { border-left: 0; }
+  .table-scroll :is(th, td):last-child { border-right: 0; }
+  .table-scroll tr:first-child :is(th, td) { border-top: 0; }
+  .table-scroll tr:last-child :is(th, td) { border-bottom: 0; }
+
+  /* Image failure path. site.js does not run this — the <img onerror> sets the
+     attribute inline, so a dead photo URL degrades to a styled brand panel
+     instead of a torn-page icon, even before scripts load. `content:` swaps the
+     replaced element itself where supported; the background covers the rest. */
+  img[data-fallback] {
+    content: url("/assets/img/fallback.svg");
+    background: var(--color-steel) url("/assets/img/fallback.svg") center / cover no-repeat;
+    color: transparent;
+    font-size: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  [data-js] .reveal, .reveal { opacity: 1; transform: none; }
+}
