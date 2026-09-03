@@ -43,7 +43,7 @@ export const site = {
   handle: "martinez.junkremovalca",
   socials: [
     { network: "Facebook", url: "https://www.facebook.com/martinez.junkremovalca", icon: "facebook" },
-    { network: "Instagram", url: "https://www.instagram.com/martinez.junkremovalca", icon: "instagram" },
+    { network: "Instagram", url: "https://martinezjunkremovalca.com/", icon: "instagram" },
     { network: "Pinterest", url: "https://www.pinterest.com/martinez.junkremovalca", icon: "pinterest" },
     { network: "X", url: "https://x.com/martinez.junkremovalca", icon: "x" },
     { network: "YouTube", url: "https://www.youtube.com/@martinez.junkremovalca", icon: "youtube" },
