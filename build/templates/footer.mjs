@@ -1,11 +1,11 @@
 /**
- * Mega footer. Every page in the site is reachable from here, which is both a
- * crawl-depth decision and a usability one.
+ * Footer: NAP block, company links and legal links.
+ *
+ * The service and city silos are reached from the header mega panels and from
+ * their own hub pages, not from here — so this stays a contact-and-trust block
+ * rather than a link farm.
  */
 import { site, yearsInBusiness } from "../data/site.js";
-import { services } from "../data/services.js";
-import { countyGroups } from "../data/cities.js";
-import { postsByDate } from "../data/posts.js";
 import { esc } from "./util.mjs";
 import { socialIcons, ui } from "./icons.mjs";
 import { logoLockup } from "./header.mjs";
@@ -15,7 +15,6 @@ const COMPANY = [
   { label: "Contact us", href: "/contact/" },
   { label: "Reviews", href: "/reviews/" },
   { label: "FAQ", href: "/faq/" },
-  { label: "Blog", href: "/blog/" },
   { label: "For businesses", href: "/commercial-junk-removal/" },
   { label: "For homeowners", href: "/residential-junk-removal/" },
 ];
@@ -51,7 +50,7 @@ export function footer() {
   return `<footer class="on-dark bg-ink text-white">
     <div class="stripes h-2.5" aria-hidden="true"></div>
 
-    <div class="wrap grid gap-11 py-14 lg:grid-cols-[1.15fr_1fr_1fr_0.85fr] lg:gap-9 lg:py-16">
+    <div class="wrap grid gap-11 py-14 lg:grid-cols-[1.25fr_0.75fr_0.75fr] lg:gap-9 lg:py-16">
 
       <div>
         <a href="/" class="inline-flex" aria-label="${esc(site.name)} home">${logoLockup({ onDark: true, size: 40 })}</a>
@@ -77,7 +76,7 @@ export function footer() {
           </a>
         </address>
 
-        <dl class="mt-6 grid gap-1.5 font-mono text-[0.72rem] uppercase tracking-[0.08em]">
+        <dl class="mt-6 grid max-w-[21rem] gap-1.5 font-mono text-[0.72rem] uppercase tracking-[0.08em]">
           ${site.hours
             .map(
               (h) => `<div class="flex justify-between gap-4 border-b border-white/10 pb-1.5">
@@ -94,40 +93,13 @@ export function footer() {
       </div>
 
       <div>
-        <h2 class="font-mono text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-white">Services</h2>
-        <div class="mt-4">${linkList(
-          services.map((s) => ({ label: s.name, href: `/services/${s.slug}/` })),
-          "sm:grid-cols-2 lg:grid-cols-1"
-        )}</div>
-        <a href="/services/" class="mt-4 inline-flex items-center gap-2 font-mono text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-hivis hover:underline">All services ${ui.arrow(14)}</a>
+        <h2 class="font-mono text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-white">Company</h2>
+        <div class="mt-4">${linkList(COMPANY)}</div>
       </div>
 
       <div>
-        <h2 class="font-mono text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-white">Areas we serve</h2>
-        ${countyGroups
-          .map(
-            (g) => `<div class="mt-4">
-          <p class="mb-2 font-mono text-[0.66rem] uppercase tracking-[0.12em] text-white/40">${esc(g.county)}</p>
-          ${linkList(g.cities.map((c) => ({ label: `${c.name}, CA`, href: `/areas-we-serve/${c.slug}/` })), "sm:grid-cols-2 lg:grid-cols-1")}
-        </div>`
-          )
-          .join("")}
-        <a href="/areas-we-serve/" class="mt-4 inline-flex items-center gap-2 font-mono text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-hivis hover:underline">Full service area ${ui.arrow(14)}</a>
-      </div>
-
-      <div class="grid content-start gap-8">
-        <div>
-          <h2 class="font-mono text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-white">Company</h2>
-          <div class="mt-4">${linkList(COMPANY)}</div>
-        </div>
-        <div>
-          <h2 class="font-mono text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-white">Latest from the blog</h2>
-          <div class="mt-4">${linkList(postsByDate.slice(0, 4).map((p) => ({ label: p.h1, href: `/blog/${p.slug}/` })))}</div>
-        </div>
-        <div>
-          <h2 class="font-mono text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-white">Legal</h2>
-          <div class="mt-4">${linkList(LEGAL)}</div>
-        </div>
+        <h2 class="font-mono text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-white">Legal</h2>
+        <div class="mt-4">${linkList(LEGAL)}</div>
       </div>
     </div>
 

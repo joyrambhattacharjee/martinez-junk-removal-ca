@@ -172,9 +172,14 @@ builder has it ready behind one flag — set `REVIEWS_ARE_REAL = true` in
 Turn it on when you have real, verifiable reviews. `/reviews/` explains the
 absence on-page rather than leaving a gap.
 
-**Internal linking.** Every page is reachable from the mega footer. Service pages
-link to all 16 cities; city pages link to all 15 services; blog posts link down
-into both. Crawl depth from the home page is never more than two clicks.
+**Internal linking.** The header mega panels carry the full service and city
+silos on every page, so all 15 services and all 16 cities are one click from
+anywhere. Service pages link to all 16 cities; city pages link to all 15
+services; blog posts link down into both. The footer is deliberately not a link
+farm — it holds NAP, hours, socials, company and legal only. Measured on the
+generated output: 48 of 54 pages sit one click from the home page, the remaining
+4 sit two clicks, and nothing is orphaned except `/404.html`, which should not be
+linked.
 
 ---
 

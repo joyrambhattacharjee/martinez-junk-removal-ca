@@ -13,7 +13,6 @@ export const NAV = [
   { label: "Commercial", href: "/commercial-junk-removal/" },
   { label: "Residential", href: "/residential-junk-removal/" },
   { label: "Areas We Serve", href: "/areas-we-serve/", mega: "areas" },
-  { label: "Blog", href: "/blog/" },
   { label: "About", href: "/about/" },
   { label: "Contact", href: "/contact/" },
 ];
