@@ -40,15 +40,15 @@ export const site = {
   },
 
   // Same handle across every network, per the brand's naming convention.
-  handle: "martinez.junkremovalca",
+  handle: "martinezjunkremovalca",
   socials: [
-    { network: "Facebook", url: "https://www.facebook.com/martinez.junkremovalca", icon: "facebook" },
+    { network: "Facebook", url: "https://www.facebook.com/martinezjunkremovalca", icon: "facebook" },
     { network: "Instagram", url: "https://martinezjunkremovalca.com/", icon: "instagram" },
-    { network: "Pinterest", url: "https://www.pinterest.com/martinez.junkremovalca", icon: "pinterest" },
-    { network: "X", url: "https://x.com/martinez.junkremovalca", icon: "x" },
-    { network: "YouTube", url: "https://www.youtube.com/@martinez.junkremovalca", icon: "youtube" },
-    { network: "Threads", url: "https://www.threads.net/@martinez.junkremovalca", icon: "threads" },
-    { network: "LinkedIn", url: "https://www.linkedin.com/company/martinez.junkremovalca", icon: "linkedin" },
+    { network: "Pinterest", url: "https://www.pinterest.com/martinezjunkremovalca", icon: "pinterest" },
+    { network: "X", url: "https://x.com/martinezjunkremovalca", icon: "x" },
+    { network: "YouTube", url: "https://www.youtube.com/@martinezjunkremovalca", icon: "youtube" },
+    { network: "Threads", url: "https://www.threads.net/@martinezjunkremovalca", icon: "threads" },
+    { network: "LinkedIn", url: "https://www.linkedin.com/company/martinezjunkremovalca", icon: "linkedin" },
   ],
 };
 

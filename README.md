@@ -28,7 +28,7 @@ the one file to edit.
 | 3 | **"65% diversion rate"** | `build/data/site.js` → `stats.diversion` | Invented figure. Appears in copy, the footer, and the moss-green gauge on the home and about pages. |
 | 4 | **All 16 testimonials** | `build/data/testimonials.js` | Written as placeholders. Publishing invented customer quotes is a legal and trust problem, not just an SEO one. |
 | 5 | **Street address & geo coordinates** | `build/data/site.js` → `address`, `geo` | Verify against the real yard. The coordinates feed `LocalBusiness` schema and the `geo.position` meta tags. |
-| 6 | **Social profile URLs** | `build/data/site.js` → `socials` | All seven use the handle `martinez.junkremovalca`. Confirm each profile exists before launch — `sameAs` pointing at a 404 is a weak signal. |
+| 6 | **Social profile URLs** | `build/data/site.js` → `socials` | All seven use the handle `martinezjunkremovalca`. Confirm each profile exists before launch — `sameAs` pointing at a 404 is a weak signal. |
 | 7 | **Disposal facility names, hours and fees** | `build/data/cities.js`, `build/data/posts.js` | Transfer stations and their tipping fees change. The blog post `/blog/contra-costa-solano-disposal-facilities/` is the most exposed page. |
 | 8 | **Founded year 2014 / "11+ years"** | `build/data/site.js` → `founded` | Derived, not hardcoded — `yearsInBusiness` computes from `founded`, so fixing the year fixes every mention. |
 | 9 | **Logo wordmark** | `assets/img/logo.svg` | Live SVG text, so it renders with Archivo only where Archivo is installed. Export it with the text converted to outlines, and add a 512×512 PNG if you want maximum compatibility with Google's logo guidelines. |
