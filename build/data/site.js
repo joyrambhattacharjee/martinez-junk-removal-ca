@@ -42,7 +42,7 @@ export const site = {
   // Same handle across every network, per the brand's naming convention.
   handle: "martinezjunkremovalca",
   socials: [
-    { network: "Facebook", url: "https://www.facebook.com/martinezjunkremovalca", icon: "facebook" },
+    { network: "Facebook", url: "https://www.facebook.com/martinezjunkremoveca", icon: "facebook" },
     { network: "Instagram", url: "https://martinezjunkremovalca.com/", icon: "instagram" },
     { network: "Pinterest", url: "https://www.pinterest.com/martinezjunkremovalca", icon: "pinterest" },
     { network: "X", url: "https://x.com/martinezjunkremovalca", icon: "x" },
