@@ -4,7 +4,7 @@
  */
 export const site = {
   name: "Martinez Junk Removal",
-  legalName: "Martinez Junk Removal LLC",
+  legalName: "Martinez Junk Removal CA",
   // Canonical origin — apex, no www. Every internal URL is built from this.
   origin: "https://martinezjunkremovalca.com",
   tagline: "Junk removal & construction site clean-up in Contra Costa and Solano County",

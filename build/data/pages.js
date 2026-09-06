@@ -320,7 +320,7 @@ export const legalPages = [
     blocks: [
       { t: "note", x: "This policy describes our actual practices in plain language. It is not legal advice, and it should be reviewed by a California attorney before you rely on it for compliance." },
       { t: "h2", x: "Who we are" },
-      { t: "p", x: "Martinez Junk Removal LLC, 1230 Arnold Industrial Way, Martinez, CA 94553. You can reach us at (925) 555-0142 or info@martinezjunkremovalca.com about anything on this page." },
+      { t: "p", x: "Martinez Junk Removal CA, 1230 Arnold Industrial Way, Martinez, CA 94553. You can reach us at (925) 555-0142 or info@martinezjunkremovalca.com about anything on this page." },
       { t: "h2", x: "What we collect" },
       { t: "ul", x: ["Contact details you give us — name, phone number, email address and service address — when you call, text or email for a quote.", "Job details: what needs removing, photos you send, access notes, and the price we quoted.", "Payment records for completed work, retained for tax and accounting purposes.", "Standard web server logs, which may include your IP address, browser type and the pages requested."] },
       { t: "p", x: "There are no contact forms on this site. Nothing is collected from you by this website beyond ordinary server logs unless you choose to call, text or email us." },
@@ -341,14 +341,14 @@ export const legalPages = [
   {
     slug: "terms-of-service",
     title: "Terms of Service | Martinez Junk Removal",
-    description: "Quotes, scheduling, payment, cancellations, prohibited items and liability terms for junk removal work performed by Martinez Junk Removal LLC.",
+    description: "Quotes, scheduling, payment, cancellations, prohibited items and liability terms for junk removal work performed by Martinez Junk Removal CA.",
     h1: "Terms of service",
     lead: "The working agreement between us: how quotes are given, what happens if the load changes, what we cannot legally take, and who is responsible for what.",
     updated: LEGAL_UPDATED,
     blocks: [
       { t: "note", x: "These terms describe how we operate. They are a plain-language starting point, not legal advice, and should be reviewed by a California attorney before you rely on them." },
       { t: "h2", x: "Scope" },
-      { t: "p", x: "These terms cover junk removal, hauling, cleanout, debris removal and trailer rental services performed by Martinez Junk Removal LLC, and your use of this website. Booking a job means you accept them. A signed written agreement for commercial or recurring work overrides anything here that conflicts with it." },
+      { t: "p", x: "These terms cover junk removal, hauling, cleanout, debris removal and trailer rental services performed by Martinez Junk Removal CA, and your use of this website. Booking a job means you accept them. A signed written agreement for commercial or recurring work overrides anything here that conflicts with it." },
       { t: "h2", x: "Quotes" },
       { t: "p", x: "Quotes are based on the volume, contents and access you describe. A quote covers labor, hauling and standard disposal fees for that described load. Quotes given by phone, text or email are valid for 30 days." },
       { t: "p", x: "If the actual load is materially larger than described, or contains heavy or restricted material we were not told about, we will requote before loading and you may accept it, reduce the load, or cancel at no charge. We do not add charges to an invoice after work is complete." },
