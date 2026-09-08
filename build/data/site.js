@@ -45,7 +45,7 @@ export const site = {
     { network: "Facebook", url: "https://www.facebook.com/martinezjunkremoveca", icon: "facebook" },
     { network: "Instagram", url: "https://martinezjunkremovalca.com/", icon: "instagram" },
     { network: "Pinterest", url: "https://www.pinterest.com/martinezjunkremovalca", icon: "pinterest" },
-    { network: "X", url: "https://x.com/martinezjunkremovalca", icon: "x" },
+    { network: "X", url: "https://x.com/martjunkremoval", icon: "x" },
     { network: "YouTube", url: "https://www.youtube.com/@martinezjunkremovalca", icon: "youtube" },
     { network: "Threads", url: "https://www.threads.net/@martinezjunkremovalca", icon: "threads" },
     { network: "LinkedIn", url: "https://www.linkedin.com/company/martinezjunkremovalca", icon: "linkedin" },
