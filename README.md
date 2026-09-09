@@ -23,7 +23,7 @@ the one file to edit.
 
 | # | What | Where | Why |
 |---|------|-------|-----|
-| 1 | **Phone `(925) 555-0142`** | `build/data/site.js` | `555` numbers are reserved for fiction and **will not dial**. This is the single highest-priority fix — every CTA on 54 pages points at it. |
+| 1 | **Phone `(877) 744-5791`** | `build/data/site.js` | `555` numbers are reserved for fiction and **will not dial**. This is the single highest-priority fix — every CTA on 54 pages points at it. |
 | 2 | **"4,800+ jobs completed"** | `build/data/site.js` → `stats.jobs` | Invented figure. |
 | 3 | **"65% diversion rate"** | `build/data/site.js` → `stats.diversion` | Invented figure. Appears in copy, the footer, and the moss-green gauge on the home and about pages. |
 | 4 | **All 16 testimonials** | `build/data/testimonials.js` | Written as placeholders. Publishing invented customer quotes is a legal and trust problem, not just an SEO one. |

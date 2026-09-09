@@ -65,7 +65,7 @@ export const posts = [
         "Mention appliances, mattresses and TVs by count, since those carry set fees.",
         "Tell us your city. Martinez, Pleasant Hill and Concord are same-day territory; Brentwood and Vacaville are usually next-day.",
       ] },
-      { t: "p", x: "Text the photos to (925) 555-0142 and you will get a firm written number back, usually within the hour during business hours. If the pile turns out to be larger than the photos showed, we tell you before we start loading, not after." },
+      { t: "p", x: "Text the photos to (877) 744-5791 and you will get a firm written number back, usually within the hour during business hours. If the pile turns out to be larger than the photos showed, we tell you before we start loading, not after." },
     ],
     links: {
       services: ["garage-cleanout", "furniture-removal", "trailer-rental", "property-cleanout"],
@@ -414,7 +414,7 @@ export const posts = [
         "Rodent-damaged and mildewed material, bagged at the source",
         "Whole sheds, playsets and above-ground pools, disassembled on site",
       ] },
-      { t: "note", x: "If you are unsure about an item, photograph the label and text it to (925) 555-0142. It takes us a minute to check and it saves you a trip. What we will never do is quietly bury something regulated in the middle of a load — that risks a rejected load, a fine, and a groundwater problem that outlives all of us." },
+      { t: "note", x: "If you are unsure about an item, photograph the label and text it to (877) 744-5791. It takes us a minute to check and it saves you a trip. What we will never do is quietly bury something regulated in the middle of a load — that risks a rejected load, a fine, and a groundwater problem that outlives all of us." },
       { t: "h2", x: "How to prepare a load so nothing gets left behind" },
       { t: "p", x: "Pull the hazardous items out and put them together in one visible spot — under a sink, in a box by the garage door, wherever. Tell us they are there. We will separate them, tell you which county facility takes them, and in many cases handle the drop-off for you at cost. Everything else goes in the truck, and about two-thirds of it never sees a landfill. The routing behind that is in our [county disposal facilities guide](/blog/contra-costa-solano-disposal-facilities/)." },
     ],

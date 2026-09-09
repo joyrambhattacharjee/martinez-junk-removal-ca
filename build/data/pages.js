@@ -166,7 +166,7 @@ export const aboutPage = {
 export const contactPage = {
   title: "Contact Martinez Junk Removal | Call or Text a Photo",
   description:
-    "Call (925) 555-0142 or text a photo for a firm junk removal quote in Martinez, CA. Hours, yard address, service area and a map to our Arnold Industrial Way yard.",
+    "Call (877) 744-5791 or text a photo for a firm junk removal quote in Martinez, CA. Hours, yard address, service area and a map to our Arnold Industrial Way yard.",
   h1: "Get a firm quote in one call",
   lead: "Tell us what needs to go and roughly where it sits. You get a number that covers labor, hauling and disposal — and in most of the service area, a truck within 24 hours.",
   blocks: [
@@ -215,7 +215,7 @@ export const faqPage = {
         },
         {
           q: "Can you quote from a photo?",
-          a: "Yes, and it is the fastest route. Text a photo of the pile, the garage or the pallet stack to (925) 555-0142 with your city and a note about access — ground floor, second floor, behind a gate. Most photo quotes come back inside the hour on a weekday.",
+          a: "Yes, and it is the fastest route. Text a photo of the pile, the garage or the pallet stack to (877) 744-5791 with your city and a note about access — ground floor, second floor, behind a gate. Most photo quotes come back inside the hour on a weekday.",
         },
         {
           q: "Do you charge for the estimate or the drive?",
@@ -320,7 +320,7 @@ export const legalPages = [
     blocks: [
       { t: "note", x: "This policy describes our actual practices in plain language. It is not legal advice, and it should be reviewed by a California attorney before you rely on it for compliance." },
       { t: "h2", x: "Who we are" },
-      { t: "p", x: "Martinez Junk Removal CA, 1230 Arnold Industrial Way, Martinez, CA 94553. You can reach us at (925) 555-0142 or info@martinezjunkremovalca.com about anything on this page." },
+      { t: "p", x: "Martinez Junk Removal CA, 1230 Arnold Industrial Way, Martinez, CA 94553. You can reach us at (877) 744-5791 or info@martinezjunkremovalca.com about anything on this page." },
       { t: "h2", x: "What we collect" },
       { t: "ul", x: ["Contact details you give us — name, phone number, email address and service address — when you call, text or email for a quote.", "Job details: what needs removing, photos you send, access notes, and the price we quoted.", "Payment records for completed work, retained for tax and accounting purposes.", "Standard web server logs, which may include your IP address, browser type and the pages requested."] },
       { t: "p", x: "There are no contact forms on this site. Nothing is collected from you by this website beyond ordinary server logs unless you choose to call, text or email us." },
@@ -331,7 +331,7 @@ export const legalPages = [
       { t: "h2", x: "How long we keep things" },
       { t: "p", x: "Quote enquiries that do not become jobs are cleared out within roughly two years. Records tied to completed, invoiced work are kept as long as California tax and business record requirements demand, typically seven years." },
       { t: "h2", x: "Your California rights" },
-      { t: "p", x: "Under the California Consumer Privacy Act, as amended, you can ask us what personal information we hold about you, ask for a copy of it, ask us to correct it, and ask us to delete it. Because we do not sell personal information, there is nothing to opt out of. Call (925) 555-0142 or email info@martinezjunkremovalca.com and we will verify who you are and respond within 45 days. We will not treat you differently for asking." },
+      { t: "p", x: "Under the California Consumer Privacy Act, as amended, you can ask us what personal information we hold about you, ask for a copy of it, ask us to correct it, and ask us to delete it. Because we do not sell personal information, there is nothing to opt out of. Call (877) 744-5791 or email info@martinezjunkremovalca.com and we will verify who you are and respond within 45 days. We will not treat you differently for asking." },
       { t: "h2", x: "Security" },
       { t: "p", x: "Job records live in access-controlled business systems and are seen only by the people who need them to schedule, complete or invoice work. No system is perfectly secure, and we do not claim otherwise." },
       { t: "h2", x: "Changes" },
@@ -411,7 +411,7 @@ export const legalPages = [
       { t: "h2", x: "Known limitations" },
       { t: "ul", x: ["The embedded Google Maps frames are third-party content. They are labelled with a title, and every address and phone number in them is also available as plain text elsewhere on the page, but we do not control their internal accessibility.", "Photographs are served from a third-party image CDN. If it is unreachable, a styled placeholder panel appears in place of the photo; no information is lost, because photos on this site are illustrative rather than informational."] },
       { t: "h2", x: "Alternatives, if the site is not working for you" },
-      { t: "p", x: "You never have to use this website to do business with us. Call (925) 555-0142 during business hours and a person will take the whole job down over the phone. You can also text a photo to the same number, or email info@martinezjunkremovalca.com. We will read a quote aloud, send it in large print, or send it in plain text without formatting — whichever works for you." },
+      { t: "p", x: "You never have to use this website to do business with us. Call (877) 744-5791 during business hours and a person will take the whole job down over the phone. You can also text a photo to the same number, or email info@martinezjunkremovalca.com. We will read a quote aloud, send it in large print, or send it in plain text without formatting — whichever works for you." },
       { t: "h2", x: "Tell us about a barrier" },
       { t: "p", x: "If you hit something on this site you cannot use, call or email us and describe what happened, which page you were on, and what you were using — browser, screen reader, magnifier. We treat accessibility bugs as real bugs and aim to respond within three business days." },
     ],

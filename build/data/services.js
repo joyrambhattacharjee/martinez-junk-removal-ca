@@ -12,7 +12,7 @@ export const services = [
     h1: "Office Furniture Removal in Martinez & Contra Costa County",
     title: "Office Furniture Removal Martinez CA | Cubicle & Desk Disposal",
     description:
-      "Insured office furniture removal in Martinez and 15 more cities. Cubicles broken down, desks and files hauled, quality pieces donated. Call (925) 555-0142.",
+      "Insured office furniture removal in Martinez and 15 more cities. Cubicles broken down, desks and files hauled, quality pieces donated. Call (877) 744-5791.",
     lead: "Cubicles, desks, task chairs and lateral files are heavy, awkward and almost never worth the labor of your own staff. We disconnect, break down and haul the whole floor, and route anything still usable to a nonprofit or resale channel instead of a landfill.",
     body: [
       "Office furniture is the single hardest thing to get out of a commercial building. Cubicle systems bolt together, lateral files weigh more loaded than most people expect, and a freight elevator reservation is usually the difference between a one-day job and a three-day one. We plan the removal around the building, not around the truck: elevator windows, dock times, corridor protection, and a route that keeps other tenants out of it.",
@@ -59,7 +59,7 @@ export const services = [
     h1: "Appliance & Commercial Equipment Removal in Martinez, CA",
     title: "Appliance Removal Martinez CA | Fridge, HVAC & Equipment Hauling",
     description:
-      "Appliance and commercial equipment removal across Martinez and Solano County. Refrigerators, ovens, HVAC and washers disconnected and recycled. Call (925) 555-0142.",
+      "Appliance and commercial equipment removal across Martinez and Solano County. Refrigerators, ovens, HVAC and washers disconnected and recycled. Call (877) 744-5791.",
     lead: "Refrigerators, walk-in units, ovens, HVAC condensers, washers and dryers — disconnected, carried out and taken to a recycler that handles refrigerant and metal the way California requires.",
     body: [
       "Appliances are the one category where doing it wrong has consequences beyond a sore back. Sealed units contain refrigerant that has to be recovered by a certified technician before the shell can be recycled, and California's appliance rules mean a landfill will turn away an untreated unit. We handle the disconnection, the transport and the correct destination, so the responsibility does not stay with you.",
@@ -106,7 +106,7 @@ export const services = [
     h1: "Property Cleanout Services for Landlords & Property Managers",
     title: "Property Cleanout Martinez CA | Eviction & Turnover Clearing",
     description:
-      "Foreclosure, eviction and tenant turnover cleanouts across Contra Costa & Solano County. Photo-documented, broom-clean, net-30 available. Call (925) 555-0142.",
+      "Foreclosure, eviction and tenant turnover cleanouts across Contra Costa & Solano County. Photo-documented, broom-clean, net-30 available. Call (877) 744-5791.",
     lead: "Foreclosures, evictions, tenant turnovers and abandonment cleanouts — cleared fast, photographed before and after, and handed back broom-clean so you can re-list instead of re-scheduling.",
     body: [
       "A unit that is not rentable is not earning. Our turnover work is built around that: a firm quote from photos or a walkthrough, a crew on site inside a day or two, and a unit that is empty, swept and photographed by the time we leave. For managers running multiple properties we hold a standing slot each week and bill the batch on one monthly invoice.",
@@ -153,7 +153,7 @@ export const services = [
     h1: "Estate Cleanout Services in Martinez & the Surrounding Region",
     title: "Estate Cleanout Martinez CA | Whole-House Clearing & Donation",
     description:
-      "Compassionate estate cleanouts in Martinez, Vacaville and across Contra Costa & Solano County. Keepsakes recovered, donations receipted. Call (925) 555-0142.",
+      "Compassionate estate cleanouts in Martinez, Vacaville and across Contra Costa & Solano County. Keepsakes recovered, donations receipted. Call (877) 744-5791.",
     lead: "Clearing a parent's or relative's home is rarely about the junk. We work at your pace, recover the things that matter, donate what a nonprofit can use, and hand the house back ready to list or hand over the keys.",
     body: [
       "Estate work is slower than any other job we do, and it should be. Decades of a household do not sort themselves into obvious keep-and-toss piles. Our crews go room by room, set aside documents, photographs, jewellery, coins, military items and anything else that looks like it should be a family decision, and check with you before it leaves. If a realtor's listing date is driving the schedule, tell us and we will build around it.",
@@ -200,7 +200,7 @@ export const services = [
     h1: "Construction Site Clean-Up for Martinez & Bay Area Contractors",
     title: "Construction Site Clean-Up Martinez CA | Debris Hauling",
     description:
-      "Construction site clean-up and debris hauling for contractors in Martinez, Concord, Vacaville and beyond. Phase clean-ups, next-day service. Call (925) 555-0142.",
+      "Construction site clean-up and debris hauling for contractors in Martinez, Concord, Vacaville and beyond. Phase clean-ups, next-day service. Call (877) 744-5791.",
     lead: "Phase clean-ups between trades, final punch-list hauls, and debris removal on demand. You call, we clear, the next crew gets a site they can actually work in — no dumpster sitting on the lot collecting the neighbours' furniture.",
     body: [
       "A dumpster is only cheaper if it is full and nobody else is filling it. On tight residential lots and occupied commercial buildings, a parked box costs you parking, permits, neighbour complaints and the volume that strangers put in it overnight. We haul on your schedule instead: framing scrap after rough-in, drywall after hanging, tile and packaging after finish, and a final sweep before the walkthrough.",
@@ -247,7 +247,7 @@ export const services = [
     h1: "Demolition Debris Removal in Martinez & Contra Costa County",
     title: "Demolition Debris Removal Martinez CA | Remodel & Gut-Out Hauling",
     description:
-      "Demolition debris hauled from remodels, tenant improvements and gut-outs across Martinez and Solano County. Sorted for recycling. Call (925) 555-0142.",
+      "Demolition debris hauled from remodels, tenant improvements and gut-outs across Martinez and Solano County. Sorted for recycling. Call (877) 744-5791.",
     lead: "After the demo comes the haul. Drywall, lath, tile, concrete, framing and fixtures cleared out of remodels, tenant improvements and full gut-outs — fast enough to keep the inspection date.",
     body: [
       "Demolition produces the heaviest and most mixed material we handle, and the disposal cost is driven almost entirely by how well it is separated. Clean wood, concrete, metal and cardboard each have their own facility and their own rate; mixed into one pile they all get charged at the highest one. We sort as we load, which is the single biggest lever on what a demo haul costs.",
@@ -294,7 +294,7 @@ export const services = [
     h1: "Dump Trailer Rental for Contractors & DIY Projects",
     title: "Dump Trailer Rental Martinez CA | Debris Trailer by Day or Week",
     description:
-      "Dump and enclosed trailer rental in Martinez and across Contra Costa & Solano County. Flat-rate drop-off, we haul it away full. Call (925) 555-0142.",
+      "Dump and enclosed trailer rental in Martinez and across Contra Costa & Solano County. Flat-rate drop-off, we haul it away full. Call (877) 744-5791.",
     lead: "You have the crew and the time — you just need somewhere to put it. We drop a heavy-duty dump trailer at your site, you load at your own pace, and we come back and take it away full.",
     body: [
       "Trailer rental is the cheapest way to move debris when labor is not what you are buying. It suits contractors with a crew already on site, homeowners working through a garage over a weekend, and landscapers who would rather load green waste as they cut than wait for a truck. The rate is flat by the day or the week, disposal included up to the agreed volume, so there is nothing to reconcile afterwards.",
@@ -341,7 +341,7 @@ export const services = [
     h1: "Garage Cleanout in Martinez, Vacaville & the Surrounding Cities",
     title: "Garage Cleanout Martinez CA | Garage Clearing & Junk Hauling",
     description:
-      "Garage cleanouts in Martinez, Concord, Vacaville and 13 more cities. Boxes, tools, shelving and clutter hauled in one visit. Call (925) 555-0142.",
+      "Garage cleanouts in Martinez, Concord, Vacaville and 13 more cities. Boxes, tools, shelving and clutter hauled in one visit. Call (877) 744-5791.",
     lead: "Most two-car garages in this county have not held two cars in years. We clear the boxes, the broken shelving, the bikes nobody rides and the equipment that stopped working in 2019, then sweep the slab.",
     body: [
       "A garage is the easiest room in the house to clear and the hardest one to start. The volume is deceptive — a packed two-car garage is usually a three-quarter to full truck — and almost everything in it falls into a different disposal stream: e-waste, metal, green waste, donations, hazardous, and genuine trash. We sort it at the truck so you are not making twelve trips to five facilities.",
@@ -388,7 +388,7 @@ export const services = [
     h1: "Furniture Removal & Disposal in Martinez, CA",
     title: "Furniture Removal Martinez CA | Sofa & Mattress Disposal",
     description:
-      "Furniture and mattress removal across Martinez, Vacaville and Contra Costa & Solano County. Any floor, stairs included, donation-first. Call (925) 555-0142.",
+      "Furniture and mattress removal across Martinez, Vacaville and Contra Costa & Solano County. Any floor, stairs included, donation-first. Call (877) 744-5791.",
     lead: "Sofas, sectionals, mattresses, bedroom sets and dining tables carried out from any floor — stairs, tight hallways and elevators included. Quality pieces go to a nonprofit, not a landfill.",
     body: [
       "Furniture is the category people most often try to handle themselves and most often regret. A sleeper sofa weighs close to two hundred pounds with a steel frame inside it, a king mattress does not turn in a standard stairwell, and a sectional almost never comes out the way it went in. We bring the crew, the protection and the door-frame patience so your walls survive the process.",
@@ -435,7 +435,7 @@ export const services = [
     h1: "Hoarding Cleanup in Martinez & Contra Costa County",
     title: "Hoarding Cleanup Martinez CA | Discreet Severe Clutter Clearing",
     description:
-      "Compassionate, confidential hoarding cleanup in Martinez, Vacaville and across Contra Costa & Solano County. Valuables recovered. Call (925) 555-0142.",
+      "Compassionate, confidential hoarding cleanup in Martinez, Vacaville and across Contra Costa & Solano County. Valuables recovered. Call (877) 744-5791.",
     lead: "Severe clutter is not a junk problem, and treating it like one makes everything worse. We work with homeowners, families, case workers and property managers to clear a home safely — no judgment, no audience, no rushing anyone.",
     body: [
       "Our crews are briefed before they arrive: unmarked approach where you want one, no comments, no photographs beyond what the job file needs, and every ambiguous item shown to you rather than binned. We sort room by room and set aside cash, documents, identification, photographs, medication and anything else that could matter. In houses that have been closed up a long time, that recovery process is often the most valuable part of the day.",
@@ -482,7 +482,7 @@ export const services = [
     h1: "E-Waste & Electronics Recycling in Martinez, CA",
     title: "E-Waste Removal Martinez CA | Certified Electronics Recycling",
     description:
-      "Certified e-waste and electronics recycling in Martinez and across Contra Costa & Solano County. Office IT refreshes, data destruction. Call (925) 555-0142.",
+      "Certified e-waste and electronics recycling in Martinez and across Contra Costa & Solano County. Office IT refreshes, data destruction. Call (877) 744-5791.",
     lead: "California prohibits most electronics from the landfill, and for good reason. We collect computers, monitors, TVs, printers, servers and networking gear and take them to certified processors — with documented data destruction when you need it.",
     body: [
       "Under California's Electronic Waste Recycling Act, a CRT or flat-panel display, a computer, a printer or a television cannot lawfully be thrown in the trash. Every load we pick up goes to a certified processor, and we can supply the recycling documentation your compliance file wants. For a household that is simply a convenience; for an office running an IT refresh it is the whole point.",
@@ -529,7 +529,7 @@ export const services = [
     h1: "Scrap Metal Removal & Recycling in Martinez, CA",
     title: "Scrap Metal Removal Martinez CA | Ferrous & Non-Ferrous Hauling",
     description:
-      "Scrap metal removal across Martinez, Pittsburg and Solano County. Steel, aluminum and copper hauled to certified recyclers, value credited. Call (925) 555-0142.",
+      "Scrap metal removal across Martinez, Pittsburg and Solano County. Steel, aluminum and copper hauled to certified recyclers, value credited. Call (877) 744-5791.",
     lead: "Steel, iron, aluminum, copper, brass, wire and old equipment hauled to certified recyclers — and when the scrap has real value, we credit it against the cost of the haul.",
     body: [
       "Metal is the one kind of junk that can pay part of its own way out. Sorted copper, brass and aluminum carry genuine value; clean steel carries some; mixed and painted material carries little. We are straight about which of those you have, apply what it is worth against the haul, and hand you the weight tickets from the recycler so the arithmetic is visible rather than a story.",
@@ -576,7 +576,7 @@ export const services = [
     h1: "Yard Waste & Green Waste Removal in Martinez, CA",
     title: "Yard Waste Removal Martinez CA | Brush & Green Waste Hauling",
     description:
-      "Yard waste and green waste removal across Martinez, Clayton, Vacaville and beyond. Brush, branches, sod and storm debris composted. Call (925) 555-0142.",
+      "Yard waste and green waste removal across Martinez, Clayton, Vacaville and beyond. Brush, branches, sod and storm debris composted. Call (877) 744-5791.",
     lead: "Branches, brush, leaves, sod, soil, palm fronds and landscape debris hauled by the truckload and routed to composting — not sitting in your side yard waiting for a green bin that holds a fraction of it.",
     body: [
       "A green bin is sized for weekly clippings, not for a tree that came down or a hillside cleared for defensible space. We take the volume in one visit and send it to a composting or green-waste facility rather than a landfill, which is both the legal preference in California and the reason a green haul costs less than mixed trash.",
@@ -623,7 +623,7 @@ export const services = [
     h1: "Basement Cleanout Services in Martinez, CA",
     title: "Basement Cleanout Martinez CA | Crawlspace & Storage Clearing",
     description:
-      "Basement and crawlspace cleanouts in Martinez and Contra Costa County. We carry everything up the stairs, sort for donation, and sweep out. Call (925) 555-0142.",
+      "Basement and crawlspace cleanouts in Martinez and Contra Costa County. We carry everything up the stairs, sort for donation, and sweep out. Call (877) 744-5791.",
     lead: "Basements, crawlspaces and under-house storage cleared out completely — our crew handles every trip up the stairs, sorts what can be donated, and leaves the floor swept.",
     body: [
       "Basements collect what nobody wants to decide about: paint from two owners ago, a dead water heater, boxes that have been rained on through a foundation vent. Older Bay Area housing stock makes the access harder than the volume — narrow stair treads, low headroom, a hatch instead of a door. The work is in the carrying, not the hauling, which is why we quote labor honestly rather than pretending it is a simple pickup.",
@@ -670,7 +670,7 @@ export const services = [
     h1: "Attic Cleanout Services in Martinez, CA",
     title: "Attic Cleanout Martinez CA | Attic Storage & Insulation Removal",
     description:
-      "Attic cleanouts in Martinez and across Contra Costa and Solano County. Boxes, old insulation and stored items brought down safely. Call (925) 555-0142.",
+      "Attic cleanouts in Martinez and across Contra Costa and Solano County. Boxes, old insulation and stored items brought down safely. Call (877) 744-5791.",
     lead: "Attic storage, deteriorated insulation and decades of boxes brought down through the hatch and hauled away — without anyone from your household going up a ladder into a 120-degree crawlspace.",
     body: [
       "Attics are the least safe room in the house to clear yourself. You are balancing on joists in poor light, in heat that peaks well above the rest of the house, moving awkward boxes down a folding ladder. Our crew works the space in pairs with lighting and a spotter, passes items down rather than carrying them down, and protects the hallway below with drop cloths.",

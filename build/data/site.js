@@ -10,7 +10,7 @@ export const site = {
   tagline: "Junk removal & construction site clean-up in Contra Costa and Solano County",
   founded: 2014,
 
-  phoneDisplay: "(925) 555-0142",
+  phoneDisplay: "(877) 744-5791",
   phoneHref: "tel:+19255550142",
   smsHref: "sms:+19255550142",
   email: "info@martinezjunkremovalca.com",
