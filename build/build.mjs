@@ -127,7 +127,7 @@ function audienceHub(hub, { route, im, list, quotes, faqKeys, altHref, altLabel 
     S.serviceGrid(list, {
       eyebrow: "Services",
       h2: `${list.length} services on this side of the business`,
-      intro: "Every one of these is priced the same way — by how much of the truck bed it fills.",
+      intro: "Every one of these is handled the same way — send a photo or a quick job note and we will match the right crew and setup for it.",
       cta: { href: altHref, label: altLabel },
       bg: "bg-white",
     }),
@@ -185,8 +185,8 @@ function servicesHub() {
     S.pageHero({ eyebrow: "Services", h1: h.h1, lead: h.lead, im: images.teamTruck, bullets: h.bullets }),
     S.serviceGrid(services, {
       eyebrow: "The full list",
-      h2: `All ${services.length} services, priced by volume`,
-      intro: "Grouped by nothing in particular — most jobs are a mix. Pick the closest match and the page will tell you what we take and what it costs.",
+      h2: `All ${services.length} services available`,
+      intro: "Grouped by nothing in particular — most jobs are a mix. Pick the closest match and the page will tell you what we take and what kind of crew and schedule fits the work.",
       bg: "bg-white",
     }),
     S.loadLine({ bg: "bg-concrete" }),
@@ -225,17 +225,17 @@ function servicePage(s) {
       h1: s.h1,
       lead: s.lead,
       im,
-      bullets: [s.pricing, "Firm quote before anything moves", `Available in all ${site.stats.cities} cities we serve`],
+      bullets: ["Clear-out and hauling handled in one visit", "Firm quote before anything moves", `Available in all ${site.stats.cities} cities we serve`],
     }),
     `<section class="bg-white">
       <div class="wrap grid gap-9 py-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14 lg:py-18">
         <div class="prose-tight">${s.body.map((p) => `<p>${inline(p)}</p>`).join("")}</div>
         <div class="card p-6">
-          <p class="eyebrow eyebrow-plain">What this costs</p>
-          <p class="mt-3 text-[0.95rem] leading-relaxed text-ink/80">${inline(s.pricing)}</p>
+          <p class="eyebrow eyebrow-plain">Need a quote?</p>
+          <p class="mt-3 text-[0.95rem] leading-relaxed text-ink/80">Send a photo or a short description of the pile and we will tell you the right next step and the next available window.</p>
           <div class="mt-5 border-t hairline pt-5">
             <a href="${site.phoneHref}" class="display block text-[1.75rem] leading-none text-ink hover:text-hivis-deep">${esc(site.phoneDisplay)}</a>
-            <p class="mt-1.5 font-mono text-[0.66rem] uppercase tracking-[0.1em] text-slate">Firm quote in one call</p>
+            <p class="mt-1.5 font-mono text-[0.66rem] uppercase tracking-[0.1em] text-slate">Call or text us</p>
             <div class="mt-4">${S.callButtons({ compact: true })}</div>
           </div>
         </div>
@@ -332,9 +332,9 @@ function cityPage(c) {
     S.pageHero({
       eyebrow: c.county,
       h1: `Junk Removal in ${c.name}, ${site.address.region}`,
-      lead: `Same crew, same firm pricing, dispatched from our Martinez yard — ${c.drive.toLowerCase()}. ${c.response} for most ${c.name} jobs, residential or commercial.`,
+      lead: `Same crew, dispatched from our Martinez yard — ${c.drive.toLowerCase()}. ${c.response} for most ${c.name} jobs, residential or commercial.`,
       im: images[c.hq ? "martinezWaterfront" : "teamTruck"],
-      bullets: [`${c.response} in ${c.name}`, "Labor, hauling and disposal in one quote", `ZIP codes: ${c.zips.join(", ")}`],
+      bullets: [`${c.response} in ${c.name}`, "Labor, hauling and disposal handled in one visit", `ZIP codes: ${c.zips.join(", ")}`],
     }),
     S.cityLocal(c),
     S.serviceGrid(featuredServices, {
@@ -345,7 +345,7 @@ function cityPage(c) {
       cta: { href: "/services/", label: "All services" },
     }),
     S.cityMap(c),
-    S.loadLine({ bg: "bg-concrete", h2: `${c.name} pricing works the same way` }),
+    S.loadLine({ bg: "bg-concrete", h2: `Need service in ${c.name}?` }),
     S.testimonialSection([quote], cityBySlug, { h2: `From a ${c.name} customer`, bg: "bg-white" }),
     S.serviceLinkStrip({ h2: `Every service we offer in ${c.name}`, cityName: c.name }),
     S.nearbyCities(c, cityBySlug),

@@ -196,18 +196,18 @@ export const reviewsPage = {
 };
 
 export const faqPage = {
-  title: "Junk Removal FAQ | Pricing, Items & Scheduling",
+  title: "Junk Removal FAQ | Items & Scheduling",
   description:
-    "How junk removal pricing works, what we can and cannot take, how fast we can get there, and how commercial insurance and scheduling are handled.",
+    "What we can and cannot take, how fast we can get there, and how commercial insurance and scheduling are handled.",
   h1: "Questions we get every week",
-  lead: "Pricing, prohibited items, timing, access and paperwork. If your question is not here, call — you will get a straight answer rather than a callback form.",
+  lead: "What to expect, prohibited items, timing, access and paperwork. If your question is not here, call — you will get a straight answer rather than a callback form.",
   groups: [
     {
-      title: "Pricing & quotes",
+      title: "Quotes & scheduling",
       faqs: [
         {
-          q: "How much does junk removal cost?",
-          a: "Price follows volume — how much of the 15-cubic-yard truck bed your load fills. An eighth of a truck runs $135–$185, a half is $420–$565, and a full truck is $795–$995. Labor, hauling and disposal fees are inside that number. Heavy single items like a hot tub, a safe or a concrete slab are quoted separately because they need equipment rather than space. The full breakdown is in our [Martinez junk removal cost guide](/blog/junk-removal-cost-martinez/).",
+          q: "How do you price a junk removal job?",
+          a: "We quote around the actual job: what is in the pile, how much of the truck the load will take up, how awkward the access is, and whether anything heavy or regulated needs a different handling plan. We do not charge by the hour and we do not surprise you with a second bill at the curb.",
         },
         {
           q: "Is the quote firm, or does it change on the day?",
@@ -381,7 +381,7 @@ export const legalPages = [
     blocks: [
       { t: "note", x: "This page is a plain-language disclaimer, not legal advice. Have a California attorney review it before launch." },
       { t: "h2", x: "Pricing is indicative until we quote it" },
-      { t: "p", x: "Every price range on this site — the load-line tiers, the cost guide, the per-service notes — reflects typical jobs in our service area. Your job is priced on its own volume, contents and access. Only a quote given to you directly by phone, text or email is binding, and it is binding for the load we were told about." },
+      { t: "p", x: "The examples on this site are general guidance only. Your job is quoted on its own volume, contents and access. Only a quote given to you directly by phone, text or email is binding, and it is binding for the load we were told about." },
       { t: "h2", x: "Third-party facilities and hours" },
       { t: "p", x: "We name transfer stations, recycling centers, household-hazardous-waste sites and donation partners as a convenience. We do not operate any of them. Their hours, accepted materials, residency requirements and fees change without telling us, so confirm directly with the facility before you drive there with a trailer." },
       { t: "h2", x: "Regulatory information" },

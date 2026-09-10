@@ -110,7 +110,6 @@ function businessNode() {
     url: url("/"),
     telephone: site.phoneHref.replace("tel:", ""),
     email: site.email,
-    priceRange: "$$",
     currenciesAccepted: "USD",
     paymentAccepted: "Cash, Check, Credit Card, ACH, Invoice",
     address: postalAddress,

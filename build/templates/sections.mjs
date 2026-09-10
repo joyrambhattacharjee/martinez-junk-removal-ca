@@ -60,39 +60,18 @@ export function tickrule(onDark = false) {
   return `<div class="tickrule ${onDark ? "text-white" : "text-ink"}" aria-hidden="true"></div>`;
 }
 
-/* ── the load line: pricing made legible ──────────────────────────────── */
+/* ── a neutral quote section without public price tables ────────────────── */
 
 export function loadLine({
-  eyebrow = "How pricing works",
-  h2 = "You pay for the space you fill",
-  intro = "Our beds hold 15 cubic yards. We mark them in eighths, quote the mark before anything is loaded, and the number includes labor, hauling and disposal. No weight surcharges, no hourly meter.",
-  note = "Heavy material — concrete, dirt, tile, roofing — is quoted by the cubic yard instead, because it reaches the truck's legal weight limit long before it fills the bed. We will tell you which applies to your job on the phone.",
+  eyebrow = "Need a quote?",
+  h2 = "Tell us what needs to go",
+  intro = "Send a photo or a short list of what is in the pile and we will match the right crew, truck and schedule for the job. We will give you a clear answer before anything is moved.",
+  note = "If the load is heavy, awkward, or blocked by stairs or tight access, we will tell you what to expect before we dispatch.",
   bg = "bg-white",
 } = {}) {
   return `<section class="${bg}">
     <div class="wrap py-14 lg:py-18">
       ${sectionHead({ eyebrow, h2, intro })}
-
-      <div class="mt-9 grid gap-2.5" role="table" aria-label="Junk removal pricing by truck volume">
-        <div class="hidden grid-cols-[8rem_1fr_10rem] gap-5 border-b hairline pb-2 font-mono text-[0.64rem] uppercase tracking-[0.13em] text-slate lg:grid" role="row">
-          <span role="columnheader">Load</span><span role="columnheader">Bed filled</span><span role="columnheader" class="text-right">Price range</span>
-        </div>
-        ${loadTiers
-          .map(
-            (t) => `<div class="grid items-center gap-x-5 gap-y-3 border-b hairline py-3.5 lg:grid-cols-[8rem_1fr_10rem]" role="row">
-          <div class="flex items-baseline justify-between gap-3 lg:block" role="cell">
-            <span class="display block text-[1.02rem]">${esc(t.label)}</span>
-            <span class="font-mono text-[0.68rem] uppercase tracking-[0.09em] text-slate">${esc(t.yards)}</span>
-          </div>
-          <div role="cell">
-            ${gauge({ fill: t.fill, label: `${t.label} — ${t.yards}` })}
-            <p class="mt-2 text-[0.86rem] leading-snug text-slate">${esc(t.example)}</p>
-          </div>
-          <p class="display text-[1.15rem] lg:text-right" role="cell">${esc(t.price)}</p>
-        </div>`
-          )
-          .join("")}
-      </div>
 
       <div class="mt-7 grid gap-6 border-l-2 border-hivis bg-concrete-2 p-5 sm:grid-cols-[1fr_auto] sm:items-center">
         <p class="max-w-[68ch] text-[0.92rem] leading-relaxed text-ink/80">${inline(note)}</p>
@@ -213,7 +192,7 @@ export function homeHero() {
             <p class="display text-[0.95rem] text-hivis">3/4 FULL</p>
           </div>
           <div class="mt-2.5">${gauge({ fill: 75, size: "gauge-sm", label: "Truck bed three quarters full" })}</div>
-          <p class="mt-2.5 text-[0.8rem] leading-snug text-white/55">You pay for the space you fill — eighths of a bed, quoted before we load.</p>
+          <p class="mt-2.5 text-[0.8rem] leading-snug text-white/55">Send a photo or brief description and we will match the right crew and truck for the job.</p>
         </div>
       </div>
     </div>

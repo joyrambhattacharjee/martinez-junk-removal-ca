@@ -54,44 +54,8 @@ export const site = {
 
 export const yearsInBusiness = new Date().getFullYear() - site.founded;
 
-/** Volume tiers — the load line. Fill % is literal: eighths of a 15-yd bed. */
-export const loadTiers = [
-  {
-    fill: 12.5,
-    label: "1/8 truck",
-    yards: "~2 cu yd",
-    price: "$135 – $185",
-    example: "A few appliances, one office's worth of e-waste, a single mattress.",
-  },
-  {
-    fill: 25,
-    label: "1/4 truck",
-    yards: "~4 cu yd",
-    price: "$225 – $315",
-    example: "Cubicle teardown, small garage corner, a pickup bed of demo debris.",
-  },
-  {
-    fill: 50,
-    label: "1/2 truck",
-    yards: "~7.5 cu yd",
-    price: "$420 – $565",
-    example: "Studio apartment, retail back-of-house, one-room remodel debris.",
-  },
-  {
-    fill: 75,
-    label: "3/4 truck",
-    yards: "~11 cu yd",
-    price: "$610 – $780",
-    example: "Two-car garage, tenant turnover, kitchen gut-out.",
-  },
-  {
-    fill: 100,
-    label: "Full truck",
-    yards: "15 cu yd",
-    price: "$795 – $995",
-    example: "Whole-house cleanout, full office floor, multi-phase site clean-up.",
-  },
-];
+/** Volume tiers removed from public output. */
+export const loadTiers = [];
 
 export const trustPoints = [
   { title: "Licensed & insured", body: "General liability and workers' comp on every job. COIs and W-9s emailed the same day you ask." },
