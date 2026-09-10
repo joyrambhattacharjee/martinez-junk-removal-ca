@@ -12,7 +12,7 @@ export const site = {
 
   phoneDisplay: "(877) 744-5791",
   phoneHref: "tel:+18777445791",
-  smsHref: "sms:+19255550142",
+  smsHref: "sms:+18777445791",
   email: "info@martinezjunkremovalca.com",
 
   address: {
