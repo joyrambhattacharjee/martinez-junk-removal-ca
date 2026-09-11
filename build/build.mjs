@@ -58,6 +58,67 @@ function homePage() {
     S.homeHero(),
     S.trustStrip(),
     S.doorFork(),
+    `<section class="bg-white">
+      <div class="wrap py-14 lg:py-18">
+        <div class="max-w-[62ch]">
+          <p class="eyebrow">Junk removal in Martinez</p>
+          <h2 class="mt-3">Fast, full-service cleanouts when you need them</h2>
+          <p class="mt-4 text-[1.06rem] leading-relaxed text-slate">
+            From urgent pickups to complete property cleanouts, our crew handles the
+            lifting, loading, hauling, and responsible disposal. You point to what
+            needs to go—we take care of the rest.
+          </p>
+        </div>
+
+        <div class="mt-9 grid gap-5 md:grid-cols-3">
+          <article class="border hairline bg-concrete-2 p-6">
+            <p class="font-mono text-[0.68rem] uppercase tracking-[0.13em] text-slate">
+              Fast response
+            </p>
+            <h3 class="display mt-3 text-[1.35rem]">Emergency junk removal service</h3>
+            <p class="mt-3 text-[0.92rem] leading-relaxed text-slate">
+              Need clutter, debris, or unwanted items gone quickly? Our emergency
+              junk removal service helps Martinez homes and businesses clear space
+              without the wait.
+            </p>
+          </article>
+
+          <article class="border hairline bg-concrete-2 p-6">
+            <p class="font-mono text-[0.68rem] uppercase tracking-[0.13em] text-slate">
+              Property clearing
+            </p>
+            <h3 class="display mt-3 text-[1.35rem]">Home cleanout services in Martinez</h3>
+            <p class="mt-3 text-[0.92rem] leading-relaxed text-slate">
+              We make garage, attic, basement, estate, and whole-home cleanouts
+              straightforward. Our team sorts, removes, and hauls away the items you
+              no longer need.
+            </p>
+          </article>
+
+          <article class="border hairline bg-concrete-2 p-6">
+            <p class="font-mono text-[0.68rem] uppercase tracking-[0.13em] text-slate">
+              We handle it all
+            </p>
+            <h3 class="display mt-3 text-[1.35rem]">Full-service junk removal in Martinez</h3>
+            <p class="mt-3 text-[0.92rem] leading-relaxed text-slate">
+              No dumpsters, no heavy lifting, and no disposal runs. We remove
+              furniture, appliances, renovation debris, yard waste, and more from
+              wherever it is on your property.
+            </p>
+          </article>
+        </div>
+
+        <div class="mt-7 grid gap-6 border-l-2 border-hivis bg-concrete-2 p-5 sm:grid-cols-[1fr_auto] sm:items-center">
+          <p class="max-w-[68ch] text-[0.92rem] leading-relaxed text-ink/80">
+            Serving Martinez with dependable junk removal and cleanout services.
+            Contact us for availability and a clear, upfront quote before work begins.
+          </p>
+          <a href="tel:+18777445791" class="btn btn-dark btn-sm">
+            Call (877) 744-5791
+          </a>
+        </div>
+      </div>
+    </section>`,
     S.serviceGrid(featuredServices, {
       eyebrow: "What we haul",
       h2: "Six of the fifteen things we get called for most",
