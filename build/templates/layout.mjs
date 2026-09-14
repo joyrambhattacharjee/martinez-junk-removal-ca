@@ -42,6 +42,32 @@ export function layout(o) {
   const canonical = url(o.path);
   const og = o.image || null;
   const graph = buildGraph(o);
+  const gaId = site.analytics?.googleMeasurementId || "";
+  const clarityId = site.analytics?.clarityProjectId || "";
+
+  const analyticsScripts = [];
+
+  if (gaId) {
+    analyticsScripts.push(`
+<script async src="https://www.googletagmanager.com/gtag/js?id=${gaId}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '${gaId}');
+</script>`);
+  }
+
+  if (clarityId) {
+    analyticsScripts.push(`
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "${clarityId}");
+</script>`);
+  }
 
   return `<!doctype html>
 <html lang="en-US">
@@ -79,6 +105,7 @@ ${og ? `<meta name="twitter:image" content="${esc(og.url)}">` : ""}
 <link rel="stylesheet" href="${FONTS}">
 <link rel="stylesheet" href="/assets/css/site.css">
 <script>document.documentElement.dataset.js="1"</script>
+${analyticsScripts.join("\n")}
 ${jsonld(graph)}
 </head>
 <body class="min-h-screen">

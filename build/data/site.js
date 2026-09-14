@@ -41,6 +41,10 @@ export const site = {
 
   // Same handle across every network, per the brand's naming convention.
   handle: "martinezjunkremovalca",
+  analytics: {
+    googleMeasurementId: "",
+    clarityProjectId: "",
+  },
   socials: [
     { network: "Facebook", url: "https://www.facebook.com/martinezjunkremoveca", icon: "facebook" },
     { network: "Instagram", url: "https://martinezjunkremovalca.com/", icon: "instagram" },
