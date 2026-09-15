@@ -489,7 +489,7 @@ function postPage(p) {
             <time datetime="${p.date}">${longDate(p.date)}</time><span aria-hidden="true">/</span>
             <span>${p.readMins} min read</span>${p.updated ? `<span aria-hidden="true">/</span><span>Updated ${longDate(p.updated)}</span>` : ""}
           </p>
-          <h1 class="mt-4">${esc(p.h1)}</h1>
+          <h1 class="mt-2">${esc(p.h1)}</h1>
           <p class="mt-5 max-w-[62ch] text-[1.08rem] leading-relaxed text-white/72">${esc(p.excerpt)}</p>
           <p class="mt-6 font-mono text-[0.68rem] uppercase tracking-[0.1em] text-white/45">By ${esc(p.author)}</p>
         </div>
