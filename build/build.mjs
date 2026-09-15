@@ -57,7 +57,7 @@ function homePage() {
   const body = [
     S.homeHero(),
     S.trustStrip(),
-    S.doorFork(),
+    S.doorFork({ links: false }),
     `<section class="bg-white">
       <div class="wrap py-14 lg:py-18">
         <div class="max-w-[62ch]">
@@ -125,6 +125,7 @@ function homePage() {
       intro: "Cleanouts, construction debris, appliances, furniture and electronics make up most of our week. The full list runs to fifteen services.",
       cta: { href: "/services/", label: `All ${services.length} services` },
       bg: "bg-concrete",
+      links: false,
     }),
     S.loadLine({}),
     S.processSteps([
@@ -132,20 +133,21 @@ function homePage() {
       { t: "Get a firm number", b: "Labor, hauling and disposal in one price, tied to how much of the bed you fill. You approve it before a truck is dispatched." },
       { t: "We load, sweep and divert", b: "Two-person minimum, floors protected. Metal, electronics, wood and donatable goods split off before the remainder goes to the transfer station." },
     ], {}),
-    S.aboutPreview(),
+    S.aboutPreview({ links: false }),
     S.statsBand({}),
     S.areasSection({
       h2: `${site.stats.cities} cities across Contra Costa and Solano`,
       intro: `Six trucks run out of one yard on ${site.address.street}. Response windows below are what we can realistically hold, not best-case marketing.`,
       showMap: true,
+      links: false,
     }),
     S.testimonialSection(
       [residentialTestimonials[0], commercialTestimonials[0], residentialTestimonials[1]],
       cityBySlug,
-      { h2: "Homeowners, property managers and contractors", bg: "bg-white" }
+      { h2: "Homeowners, property managers and contractors", bg: "bg-white", links: false }
     ),
     S.articleSection(),
-    S.faqSection(faqs, { bg: "bg-white" }),
+    S.faqSection(faqs, { bg: "bg-white", links: false }),
     S.callBand({}),
   ].join("\n");
 

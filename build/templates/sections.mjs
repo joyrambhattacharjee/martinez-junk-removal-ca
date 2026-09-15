@@ -102,20 +102,22 @@ export function trustStrip() {
 
 /* ── the two doors ────────────────────────────────────────────────────── */
 
-export function doorFork() {
-  const door = (href, im, eyebrow, title, body, points) => `<a href="${href}"
-    class="card card-link group relative flex flex-col overflow-hidden">
+export function doorFork({ links = true } = {}) {
+  const door = (href, im, eyebrow, title, body, points) => {
+    const tag = links ? "a" : "div";
+    const hrefAttr = links ? ` href="${href}"` : "";
+    return `<${tag}${hrefAttr}
+    class="card${links ? " card-link" : ""} group relative flex flex-col overflow-hidden">
     <div class="aspect-[16/9] overflow-hidden">${image(im, { className: "h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]", sizes: "(min-width:768px) 44vw, 100vw" })}</div>
     <div class="flex flex-1 flex-col p-6 lg:p-7">
       <p class="eyebrow">${esc(eyebrow)}</p>
       <h3 class="mt-3 text-[1.35rem]">${esc(title)}</h3>
       <p class="mt-2.5 text-[0.95rem] leading-relaxed text-slate">${esc(body)}</p>
       <ul class="ticklist mt-4 text-[0.9rem] text-ink/80">${points.map((p) => `<li>${esc(p)}</li>`).join("")}</ul>
-      <span class="mt-6 inline-flex items-center gap-2 font-mono text-[0.72rem] font-semibold uppercase tracking-[0.11em] text-hivis-deep">
-        ${esc(title.startsWith("For") ? "See how it works" : "See how it works")} <span class="card-arrow">${ui.arrow(15)}</span>
-      </span>
+      ${links ? `<span class="mt-6 inline-flex items-center gap-2 font-mono text-[0.72rem] font-semibold uppercase tracking-[0.11em] text-hivis-deep">See how it works <span class="card-arrow">${ui.arrow(15)}</span></span>` : ""}
     </div>
-  </a>`;
+  </${tag}>`;
+  };
 
   return `<section class="bg-concrete">
     <div class="wrap py-14 lg:py-18">
@@ -219,28 +221,30 @@ export function pageHero({ eyebrow, h1, lead, im, bullets = [], dark = true, cta
 
 /* ── service listings ─────────────────────────────────────────────────── */
 
-export function serviceCard(s, { compact = false } = {}) {
-  return `<a href="/services/${s.slug}/" class="card card-link group flex flex-col overflow-hidden">
+export function serviceCard(s, { compact = false, links = true } = {}) {
+  const tag = links ? "a" : "div";
+  const hrefAttr = links ? ` href="/services/${s.slug}/"` : "";
+  return `<${tag}${hrefAttr} class="card${links ? " card-link" : ""} group flex flex-col overflow-hidden">
     ${compact ? "" : `<div class="aspect-[16/10] overflow-hidden">${image(images[s.image], { className: "h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]", sizes: "(min-width:1024px) 30vw, (min-width:640px) 45vw, 100vw" })}</div>`}
     <div class="flex flex-1 flex-col p-5">
       <div class="flex items-start justify-between gap-3">
         <h3 class="text-[1.08rem]">${esc(s.name)}</h3>
-        <span class="card-arrow mt-0.5 flex-none text-hivis-deep">${ui.arrow(16)}</span>
+        ${links ? `<span class="card-arrow mt-0.5 flex-none text-hivis-deep">${ui.arrow(16)}</span>` : ""}
       </div>
       <p class="mt-2 flex-1 text-[0.89rem] leading-relaxed text-slate">${esc(s.card)}</p>
       <p class="mt-4 font-mono text-[0.62rem] uppercase tracking-[0.12em] text-slate">${s.audience === "both" ? "Homes &amp; businesses" : s.audience === "commercial" ? "Businesses &amp; contractors" : "Homeowners"}</p>
     </div>
-  </a>`;
+  </${tag}>`;
 }
 
-export function serviceGrid(list, { eyebrow = "What we haul", h2 = "Services", intro = "", bg = "bg-white", cta = null, compact = false } = {}) {
+export function serviceGrid(list, { eyebrow = "What we haul", h2 = "Services", intro = "", bg = "bg-white", cta = null, compact = false, links = true } = {}) {
   return `<section class="${bg}">
     <div class="wrap py-14 lg:py-18">
       ${sectionHead({ eyebrow, h2, intro })}
       <div class="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        ${list.map((s) => serviceCard(s, { compact })).join("")}
+        ${list.map((s) => serviceCard(s, { compact, links })).join("")}
       </div>
-      ${cta ? `<div class="mt-9"><a href="${cta.href}" class="btn btn-dark">${esc(cta.label)} ${ui.arrow(15)}</a></div>` : ""}
+      ${cta && links ? `<div class="mt-9"><a href="${cta.href}" class="btn btn-dark">${esc(cta.label)} ${ui.arrow(15)}</a></div>` : ""}
     </div>
   </section>`;
 }
@@ -289,7 +293,7 @@ export function processSteps(steps, { eyebrow = "How it works", h2 = "Three step
 
 /* ── about + diversion story ──────────────────────────────────────────── */
 
-export function aboutPreview() {
+export function aboutPreview({ links = true } = {}) {
   return `<section class="bg-white">
     <div class="wrap grid items-center gap-10 py-14 lg:grid-cols-2 lg:gap-14 lg:py-18">
       <div class="grid gap-4 sm:grid-cols-2">
@@ -316,10 +320,10 @@ export function aboutPreview() {
           <p class="mt-3 text-[0.88rem] leading-relaxed text-slate">Metal to a certified recycler, green waste to composting, electronics to a certified processor, usable furniture to local nonprofits. You get the diversion paperwork for your records.</p>
         </div>
 
-        <div class="mt-6 flex flex-wrap gap-2.5">
+        ${links ? `<div class="mt-6 flex flex-wrap gap-2.5">
           <a href="/about/" class="btn btn-dark btn-sm">Our story ${ui.arrow(15)}</a>
           <a href="/reviews/" class="btn btn-outline btn-sm">Read reviews</a>
-        </div>
+        </div>` : ""}
       </div>
     </div>
   </section>`;
@@ -327,7 +331,7 @@ export function aboutPreview() {
 
 /* ── areas ────────────────────────────────────────────────────────────── */
 
-export function areasSection({ eyebrow = "Where we work", h2 = "16 cities, two counties, one yard", intro = "", showMap = false, currentSlug = null, bg = "bg-concrete" } = {}) {
+export function areasSection({ eyebrow = "Where we work", h2 = "16 cities, two counties, one yard", intro = "", showMap = false, currentSlug = null, bg = "bg-concrete", links = true } = {}) {
   return `<section class="${bg}">
     <div class="wrap py-14 lg:py-18">
       ${sectionHead({ eyebrow, h2, intro })}
@@ -340,11 +344,11 @@ export function areasSection({ eyebrow = "Where we work", h2 = "16 cities, two c
             <ul class="mt-3 grid gap-0.5">
               ${g.cities
                 .map(
-                  (c) => `<li><a href="/areas-we-serve/${c.slug}/"
-                class="flex items-baseline justify-between gap-3 py-1.5 text-[0.94rem] ${c.slug === currentSlug ? "text-hivis-deep" : "text-ink/85 hover:text-hivis-deep"}"${c.slug === currentSlug ? ' aria-current="page"' : ""}>
+                  (c) => `<li>${links ? `<a href="/areas-we-serve/${c.slug}/"` : `<div`}
+                class="flex items-baseline justify-between gap-3 py-1.5 text-[0.94rem] ${c.slug === currentSlug ? "text-hivis-deep" : "text-ink/85 hover:text-hivis-deep"}"${links && c.slug === currentSlug ? ' aria-current="page"' : ""}>
                 <span>${esc(c.name)}${c.hq ? ' <span class="font-mono text-[0.6rem] uppercase tracking-[0.1em] text-hivis-deep">HQ</span>' : ""}</span>
                 <span class="font-mono text-[0.64rem] uppercase tracking-[0.08em] text-slate">${esc(c.response)}</span>
-              </a></li>`
+              </${links ? "a" : "div"}></li>`
                 )
                 .join("")}
             </ul>
@@ -361,7 +365,7 @@ export function areasSection({ eyebrow = "Where we work", h2 = "16 cities, two c
             : ""
         }
       </div>
-      ${showMap ? "" : `<div class="mt-8"><a href="/areas-we-serve/" class="btn btn-dark btn-sm">Full service area ${ui.arrow(15)}</a></div>`}
+      ${showMap || !links ? "" : `<div class="mt-8"><a href="/areas-we-serve/" class="btn btn-dark btn-sm">Full service area ${ui.arrow(15)}</a></div>`}
     </div>
   </section>`;
 }
@@ -428,7 +432,7 @@ export function nearbyCities(city, cityBySlug) {
 
 /* ── testimonials ─────────────────────────────────────────────────────── */
 
-export function testimonialCard(t, cityBySlug) {
+export function testimonialCard(t, cityBySlug, { links = true } = {}) {
   const c = cityBySlug[t.city];
   const s = serviceBySlug[t.service];
   return `<figure class="card flex h-full flex-col p-5">
@@ -437,19 +441,19 @@ export function testimonialCard(t, cityBySlug) {
     <figcaption class="mt-4 border-t hairline pt-3.5">
       <span class="display block text-[0.98rem]">${esc(t.name)}</span>
       <span class="mt-0.5 block font-mono text-[0.64rem] uppercase tracking-[0.1em] text-slate">
-        ${esc(t.role)}${c ? ` · <a href="/areas-we-serve/${c.slug}/" class="hover:text-hivis-deep hover:underline">${esc(c.name)}, ${esc(site.address.region)}</a>` : ""}
+        ${esc(t.role)}${c ? links ? ` · <a href="/areas-we-serve/${c.slug}/" class="hover:text-hivis-deep hover:underline">${esc(c.name)}, ${esc(site.address.region)}</a>` : ` · ${esc(c.name)}, ${esc(site.address.region)}` : ""}
       </span>
-      ${s ? `<a href="/services/${s.slug}/" class="mt-2 inline-flex font-mono text-[0.64rem] uppercase tracking-[0.1em] text-hivis-deep hover:underline">${esc(s.name)}</a>` : ""}
+      ${s ? links ? `<a href="/services/${s.slug}/" class="mt-2 inline-flex font-mono text-[0.64rem] uppercase tracking-[0.1em] text-hivis-deep hover:underline">${esc(s.name)}</a>` : `<span class="mt-2 inline-flex font-mono text-[0.64rem] uppercase tracking-[0.1em] text-slate">${esc(s.name)}</span>` : ""}
     </figcaption>
   </figure>`;
 }
 
-export function testimonialSection(list, cityBySlug, { eyebrow = "In their words", h2 = "What customers say", intro = "", bg = "bg-white" } = {}) {
+export function testimonialSection(list, cityBySlug, { eyebrow = "In their words", h2 = "What customers say", intro = "", bg = "bg-white", links = true } = {}) {
   return `<section class="${bg}">
     <div class="wrap py-14 lg:py-18">
       ${sectionHead({ eyebrow, h2, intro })}
       <div class="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        ${list.map((t) => testimonialCard(t, cityBySlug)).join("")}
+        ${list.map((t) => testimonialCard(t, cityBySlug, { links })).join("")}
       </div>
     </div>
   </section>`;
@@ -535,7 +539,7 @@ export function articleSection() {
 
 /* ── FAQ ──────────────────────────────────────────────────────────────── */
 
-export function faqSection(faqs, { eyebrow = "Common questions", h2 = "Questions we get every week", intro = "", bg = "bg-white", cta = true } = {}) {
+export function faqSection(faqs, { eyebrow = "Common questions", h2 = "Questions we get every week", intro = "", bg = "bg-white", cta = true, links = true } = {}) {
   return `<section class="${bg}">
     <div class="wrap grid gap-9 py-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14 lg:py-18">
       <div class="lg:sticky lg:top-28 lg:self-start">
@@ -547,7 +551,7 @@ export function faqSection(faqs, { eyebrow = "Common questions", h2 = "Questions
           .map(
             (f) => `<details class="qa">
           <summary>${esc(f.q)}<span class="qa-sign" aria-hidden="true"></span></summary>
-          <div class="qa-body">${inline(f.a)}</div>
+          <div class="qa-body">${links ? inline(f.a) : esc(f.a).replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, "$1")}</div>
         </details>`
           )
           .join("")}
