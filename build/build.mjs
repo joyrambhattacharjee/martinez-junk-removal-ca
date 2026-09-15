@@ -155,7 +155,7 @@ function homePage() {
     "/",
     layout({
       path: "/",
-      title: `Junk Removal in Martinez, CA | Same-Day Hauling | ${site.stats.cities} Cities`,
+      title: "Junk Removal Martinez, CA: Full Service Junk Hauling, Home, Residential & Commercial Cleanouts",
       description: `Family-run junk removal and construction site clean-up in Martinez, CA since ${site.founded}. Firm quotes, no weight fees, same-day service in Contra Costa & Solano.`,
       body,
       image: images.heroCrew,
