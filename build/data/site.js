@@ -42,7 +42,7 @@ export const site = {
   // Same handle across every network, per the brand's naming convention.
   handle: "martinezjunkremovalca",
   analytics: {
-    googleMeasurementId: "",
+    googleMeasurementId: "G-ML568JCV89",
     clarityProjectId: "",
   },
   socials: [
