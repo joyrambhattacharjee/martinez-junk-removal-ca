@@ -43,7 +43,7 @@ export const site = {
   handle: "martinezjunkremovalca",
   analytics: {
     googleMeasurementId: "G-ML568JCV89",
-    clarityProjectId: "yioc7vnh80",
+    clarityProjectId: "yiohdrfvc4",
   },
   socials: [
     { network: "Facebook", url: "https://www.facebook.com/martinezjunkremoveca", icon: "facebook" },
