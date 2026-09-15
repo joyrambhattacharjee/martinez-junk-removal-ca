@@ -144,7 +144,7 @@ function homePage() {
       cityBySlug,
       { h2: "Homeowners, property managers and contractors", bg: "bg-white" }
     ),
-    S.blogPreview(postImages, { count: 3 }),
+    S.articleSection(),
     S.faqSection(faqs, { bg: "bg-white" }),
     S.callBand({}),
   ].join("\n");
