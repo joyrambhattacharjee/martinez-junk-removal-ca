@@ -152,12 +152,6 @@ export function doorFork({ links = true } = {}) {
 
 /* ── heroes ───────────────────────────────────────────────────────────── */
 
-const leadFormIframe = `<iframe src="//leads.leadsmartinc.com/?api_key=eccf565586cda416df8b89f66df641fee9a1bcb8&affiliate_source=joyryhtgs1&funnel=4&category=183&step=1&buttons=btn-warning" width="600" height="545" frameborder="0" class="max-w-full" title="Request a junk removal quote"></iframe>`;
-
-function leadForm() {
-  return `<div class="mb-6 w-full overflow-hidden">${leadFormIframe}</div>`;
-}
-
 /** Home hero: split, photo carries a live load gauge overlay. */
 export function homeHero() {
   return `<section class="on-dark relative overflow-hidden bg-ink text-white">
@@ -196,7 +190,12 @@ export function homeHero() {
           ${image(images.heroCrew, { className: "h-full w-full object-cover", eager: true, priority: true, sizes: "(min-width:1024px) 46vw, 100vw" })}
         </div>
         <div class="absolute inset-x-4 bottom-4 border border-white/15 bg-ink/92 p-4 backdrop-blur-sm sm:inset-x-6 sm:bottom-6 sm:p-5">
-          ${leadFormIframe}
+          <div class="flex items-baseline justify-between gap-4">
+            <p class="font-mono text-[0.66rem] uppercase tracking-[0.13em] text-white/55">Today's load · 15 cu yd bed</p>
+            <p class="display text-[0.95rem] text-hivis">3/4 FULL</p>
+          </div>
+          <div class="mt-2.5">${gauge({ fill: 75, size: "gauge-sm", label: "Truck bed three quarters full" })}</div>
+          <p class="mt-2.5 text-[0.8rem] leading-snug text-white/55">Send a photo or brief description and we will match the right crew and truck for the job.</p>
         </div>
       </div>
     </div>
@@ -216,7 +215,11 @@ export function pageHero({ eyebrow, h1, lead, im, bullets = [], dark = true, cta
         <div class="mt-7">${callButtons({ onDark: dark })}</div>
         ${ctaNote ? `<p class="mt-3.5 font-mono text-[0.7rem] uppercase tracking-[0.1em] ${dark ? "text-white/45" : "text-slate"}">${esc(ctaNote)}</p>` : ""}
       </div>
+<<<<<<< HEAD
       ${im ? `<div class="grid gap-4"><div class="aspect-[4/3] overflow-hidden border hairline lg:aspect-[5/4]">${image(im, { className: "h-full w-full object-cover", eager: true, priority: true, sizes: "(min-width:1024px) 38vw, 100vw" })}</div><div class="border border-white/15 bg-ink/92 p-4 backdrop-blur-sm sm:p-5"><p class="mb-3 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-hivis">Get a firm quote</p>${leadFormIframe}</div></div>` : ""}
+=======
+      ${im ? `<div class="aspect-[4/3] overflow-hidden border hairline lg:aspect-[5/4]">${image(im, { className: "h-full w-full object-cover", eager: true, priority: true, sizes: "(min-width:1024px) 38vw, 100vw" })}</div>` : ""}
+>>>>>>> parent of 31e806c (main)
     </div>
   </section>`;
 }
@@ -897,3 +900,6 @@ export function legalBody(blocks, { updated }) {
     </div>
   </section>`;
 }
+
+
+
