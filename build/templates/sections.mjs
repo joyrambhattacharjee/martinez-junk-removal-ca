@@ -216,7 +216,7 @@ export function pageHero({ eyebrow, h1, lead, im, bullets = [], dark = true, cta
         <div class="mt-7">${callButtons({ onDark: dark })}</div>
         ${ctaNote ? `<p class="mt-3.5 font-mono text-[0.7rem] uppercase tracking-[0.1em] ${dark ? "text-white/45" : "text-slate"}">${esc(ctaNote)}</p>` : ""}
       </div>
-      ${im ? `<div class="relative"><div class="aspect-[4/3] overflow-hidden border hairline lg:aspect-[5/4]">${image(im, { className: "h-full w-full object-cover", eager: true, priority: true, sizes: "(min-width:1024px) 38vw, 100vw" })}</div><div class="absolute inset-x-4 bottom-4 border border-white/15 bg-ink/92 p-4 backdrop-blur-sm sm:inset-x-6 sm:bottom-6 sm:p-5">${leadFormIframe}</div></div>` : ""}
+      ${im ? `<div class="grid gap-4"><div class="aspect-[4/3] overflow-hidden border hairline lg:aspect-[5/4]">${image(im, { className: "h-full w-full object-cover", eager: true, priority: true, sizes: "(min-width:1024px) 38vw, 100vw" })}</div><div class="border border-white/15 bg-ink/92 p-4 backdrop-blur-sm sm:p-5"><p class="mb-3 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-hivis">Get a firm quote</p>${leadFormIframe}</div></div>` : ""}
     </div>
   </section>`;
 }
