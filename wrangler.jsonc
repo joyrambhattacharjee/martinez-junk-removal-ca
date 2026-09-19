@@ -3,12 +3,7 @@
   "name": "martinez-junk-removal-ca",
   "compatibility_date": "2026-08-31",
   "assets": {
-    "directory": ".",
-    "exclude": [
-      "node_modules",
-      ".git",
-      ".claude"
-    ]
+    "directory": "."
   },
   "observability": {
     "enabled": true

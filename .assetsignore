@@ -1,0 +1,11 @@
+.git/
+node_modules/
+build/
+src/
+.claude/
+.github/
+*.log
+wrangler.jsonc
+package.json
+package-lock.json
+README.md
